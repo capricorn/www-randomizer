@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import randomizer.util as randomizer_util
+from randomizer_api import util
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+s^7pqdc8@*b6x4j8!$4bpmm1zc(9oxj2!%%3kvl&g$dd49_-1'
+SECRET_KEY = util.read_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
