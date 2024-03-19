@@ -20,7 +20,6 @@ from django.urls import path
 import randomizer.views as randomizer_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('random/', randomizer_views.randomizer),
     path('random', randomizer_views.randomizer)
 ]
