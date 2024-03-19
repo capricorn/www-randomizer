@@ -28,7 +28,7 @@ SECRET_KEY = util.read_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if (os.environ['DJANGO_DEBUG'] == 'True') else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '127.0.0.1' ]
 
 
 # Application definition
