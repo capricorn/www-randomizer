@@ -5,6 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: Gunicorn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "gunicorn",
+            "args": ["randomizer_api.wsgi"],
+            "cwd": "${workspaceFolder}/randomizer_api/randomizer_api",
+            "env": {
+                "RANDOMIZER_URL_LIST": "/Users/collin/prog/proj/ewd-extractor/entries.json",
+                "SECRET_KEY_FILE": "${workspaceFolder}/randomizer_api/randomizer_api/secret.txt",
+                "DJANGO_DEBUG": "False"
+            }
+        },
+        {
             "name": "Python Debugger: Django",
             "type": "debugpy",
             "request": "launch",
